@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        h6{
+            text-align: center;
+        }
+        body{
+            font-family: "Open sans", "sans-serif";
+            font-size: 18px;
+        }
+        .container{
+            margin: 20px auto;
+            width:80%;
+        }
+        .container .color-switcher{
+            list-style: none;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container .color-switcher li{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .container .color-switcher li:first-child{
+            background-color: #c0392b;
+        }
+        .container .color-switcher li:nth-child(2){
+            background-color: #129066;
+        }
+        .container .color-switcher li:nth-child(3){
+            background-color: #4f66b4;
+        }
+        .container .color-switcher li:nth-child(4){
+            background-color: #313131;
+        }
+        .container .color-switcher li:nth-child(5){
+            background-color:rgb(212, 193, 21);
+        }
+        .container h3{
+            color: #c0392b;
+            padding: 10px;
+            text-align: left;
+            text-transform: capitalize;
+            font-size: 24px;
+        }
+        .container div{
+            background-color: #c0392b;
+            padding: 20px;
+            color: #fff;
+            text-align: left;
+        }
+        /*switcher*/
+        .red .container h3,.blue .container h3,.black .container h3,.green .container h3,.yallow .container h3{
+            padding: 10px;
+            text-align: left;
+            text-transform: capitalize;
+            font-size: 24px;
+            transition:  color 0.5s ;}
+
+        .red .container div, .black .container div, .green .container div, .blue .container div,.yallow .container div{
+            padding: 20px;
+            color: #fff;
+            text-align: left;
+            transition:  background-color 1s ;}
+
+         /*red*/
+         .blue .container h3{color: #c0392b;}
+         .red .container div{background-color: #c0392b;}
+
+        /*blue*/
+        .blue .container h3{color: #4f66b4;}
+         .blue .container div{background-color: #4f66b4;}
+
+        /*black*/
+        .black .container h3{color: #313131;}
+         .black .container div{background-color: #313131;}
+
+        /*green*/
+        .green .container h3{color: #129066;}
+        .green .container div{ background-color: #129066;}
+
+        /*yallow*/
+        .yallow .container h3{color: rgb(212, 193, 21);}
+        .yallow .container div{ background-color: rgb(212, 193, 21);}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="color-switcher">
+            <li data-color="red"></li>
+            <li data-color="green"></li>
+            <li data-color="blue"></li>
+            <li data-color="black"></li>
+            <li data-color="yallow"></li>
+            <h3>title</h3>
+            <div>Testing</div>
+        </ul>
+    </div>
+    <h6><span style="color: red;">*</span>save color in local storeg</h6>
+<script src="./script/index.js"></script>    
+</body>
+</html>
